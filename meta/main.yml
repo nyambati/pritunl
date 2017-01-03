@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Thomas Nyambati
+  description: Role to install pritunl vpn server
+  company: Andela Kenya Ltd
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+      - trusty
+  galaxy_tags: []
+  categories:
+  - cloud
+  - system
+dependencies: []

@@ -1,0 +1,4 @@
+---
+# defaults file for thomas.pritunl
+mongodb_version: 3.2
+

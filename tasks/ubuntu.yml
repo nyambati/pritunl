@@ -1,0 +1,29 @@
+
+- name: Add mongodb apt repository
+  apt_repository:
+    repo: deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/{{ mongodb_version }} multiverse
+    filename: "mongodb-org-{{ mongodb_version }}"
+    state: present
+
+- name: Add pritunl apt repository
+  apt_repository:
+    repo: deb http://repo.pritunl.com/stable/apt trusty main
+    filename: "pritunl"
+    state: present
+
+- name: Add Apt Keys
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "{{ item }}"
+  with_items: "{{ apt_keys }}"
+
+- name: Update system OS
+  apt: update_cache=yes
+
+- name: Upgrade system OS
+  apt: upgrade=yes
+
+- name: Install pritunl and mongodb
+  raw: apt-get --assume-yes install pritunl mongodb-org
+  notify: start pritunl
+

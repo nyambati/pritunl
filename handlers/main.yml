@@ -1,0 +1,6 @@
+---
+# Restart pritunl server
+- name: start pritunl
+  service:
+    name: pritunl
+    state: started
