@@ -16,11 +16,11 @@ The variables that can be passed to this role and a brief description about them
 ## Examples
 
 Install VPN Server
-
-  - hosts: all
-    roles:
+```
+- hosts: all
+  roles:
     - { role: pritnul, mongodb_versions: 3.2 }
-
+```
 ## Dependencies
 
 None
