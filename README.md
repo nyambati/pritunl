@@ -1,34 +1,34 @@
-Pritunl VPN server
-=========
+# Pritnul VPN server
 
-This Ansible role enables you to install Pritunl VPN server with much ease
+This roles helps to install Pritnul VPN Server across Ubuntu variants.
 
-Role Variables
---------------
-This role installs mongodb version 3.2 by default. However you can chnage it using mongodb_version variable
+Requirements
+
+This role requires Ansible 2.0 or higher, and platform requirements are listed in the metadata file.
+
+## Role Variables
+
+The variables that can be passed to this role and a brief description about them are as follows:
 ```
-# change the version of mongodb, default 3.2
-mongodb_version: 3.x
-
-```
-
-# Installation
-
-To install run
+  mongodb_versions: 3.2                 # The version of mongodb to install
 
 ```
-$ ansible-galaxy thomas.pritunl
-```
+## Examples
 
-## Usage
+Install VPN Server
 
-Add the role to your playbook
-```
- - hosts: servers
-   roles:
-      - { role: username.rolename, mongodb_version: 3.2 }
-```
+  - hosts: all
+    roles:
+    - { role: pritnul, mongodb_versions: 3.2 }
 
-License
--------
-This role is released under the MIT license
+## Dependencies
+
+None
+
+## License
+
+MIT
+
+## Author Information
+
+Thomas Nyambati
