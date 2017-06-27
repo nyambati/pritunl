@@ -19,7 +19,7 @@ Install VPN Server
 ```
 - hosts: all
   roles:
-    - { role: pritnul, mongodb_versions: 3.2 }
+    - { role: pritunl, mongodb_versions: 3.2 }
 ```
 ## Dependencies
 
